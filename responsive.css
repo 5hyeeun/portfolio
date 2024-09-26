@@ -233,9 +233,9 @@
     }
 
     main .search {
-        width: 600px;
+        width: 100%;
         height: 150px;
-        padding-right: 160px;
+        /* padding-right: 160px; */
     }
 
     main h2 {
@@ -267,7 +267,6 @@
     main .container {
         width: 320px;
     }
-
     .container {
         width: 320px;
     }
@@ -302,7 +301,6 @@
     }
 
     main .search {
-        width: 500px;
         height: 100px;
     }
 
