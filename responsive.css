@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1140px) {
+    header.on {
+        height: 75px;
+        width: 100%;
+        background: linear-gradient(45deg, #565d61, #183138);
+        animation: fadein .5s;
+        border: 3.5px dotted #5695b3;
+    }
+
+    header nav button {
+        font-size: 1.8rem;
+    }
+
+    header nav img {
+        display: none;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    header ul {
+        padding-top: 0;
+        flex-direction: row;
+    }
+
+    header nav {
+        width: 100%;
+        margin: 0 30px;
+    }
+
+    header ul li {
+        padding: 14px;
+    }
+
+    main .container {
+        width: 992px;
+    }
+
+    .container {
+        width: 600px;
+    }
+
+    .about-self .left {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-self .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .do-me .do-inner {
+        width: 48%;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .do-me .do-inner:nth-child(2n+1) {
+        margin-right: 4%;
+    }
+
+    .portfolio-me .portfolio-inner {
+        width: 48%;
+        margin-right: 0;
+    }
+
+    .portfolio-me .portfolio-inner:nth-child(2n+1) {
+        margin-right: 4%;
+    }
+
+    .contact-me .left {
+        width: 100%;
+    }
+
+    .contact-me .right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    main .search {
+        width: 700px;
+        height: 150px;
+    }
+
+    main h2 {
+        font-size: 3rem;
+        margin: 2rem;
+        letter-spacing: 3px;
+    }
+
+    main h2 span {
+        font-size: 3rem;
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+
+    .portfolio-me .portfolio-inne {
+        width: 100%;
+    }
+
+    header nav button {
+        font-size: 1.5rem;
+    }
+
+    .gallery-collection {
+        display: flex;
+        width: 70%;
+        height: 100%;
+        padding-top: 15vh;
+        margin: 0 auto;
+        position: absolute;
+        left: 0%;
+    }
+
+    .gallery-collection li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 70px 25px 100px;
+        transition: all .5s;
+        position: relative;
+    }
+
+    .gallery-collection li:hover {
+        flex: 1.5;
+    }
+
+    .popup {
+        padding: 100px;
+    }
+
+    .popup .txt {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 5%;
+    }
+
+    .popup figure video {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        width: 90%;
+        height: 50%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    main .search {
+        width: 700px;
+        height: 150px;
+    }
+
+    main h2 {
+        font-size: 3.5rem;
+        margin: 2rem;
+        letter-spacing: 3px;
+    }
+
+    main h2 span {
+        font-size: 3rem;
+        padding: 0px 10px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+
+    header nav button {
+        font-size: 1.5rem;
+    }
+
+    main .container {
+        width: 576px;
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .do-me .do-inner {
+        width: 100%;
+    }
+
+    main .search {
+        width: 550px;
+        height: 150px;
+    }
+
+    main h2 {
+        font-size: 3.5rem;
+        margin: 2rem;
+        letter-spacing: 3px;
+    }
+
+    main h2 span {
+        font-size: 2.5rem;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+
+    header nav button {
+        font-size: 1.3rem;
+    }
+
+    main .container {
+        width: 400px;
+    }
+
+    .container {
+        width: 360px;
+    }
+
+    main .search {
+        width: 600px;
+        height: 150px;
+        padding-right: 160px;
+    }
+
+    main h2 {
+        font-size: 3.5rem;
+        margin: 2rem;
+        letter-spacing: 3px;
+    }
+
+    main h2 span {
+        font-size: 2.2rem;
+        padding-left: 60px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 11px;
+    }
+
+    header nav button {
+        font-size: 1.3rem;
+    }
+
+    header nav button {
+        font-size: 1.3rem;
+    }
+
+    main .container {
+        width: 320px;
+    }
+
+    .container {
+        width: 320px;
+    }
+
+    section .title h2 {
+        font-size: 3rem;
+    }
+
+    .gallery-collection {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 10%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallery-collection li {
+        padding-top: 2%;
+    }
+
+    .gallery-collection li .inner figure video {
+        width: 120px;
+        height: 120px;
+        flex-wrap: wrap;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .gallery-collection li:hover .inner figure video {
+        width: 200px;
+        height: 150p;
+    }
+
+    main .search {
+        width: 500px;
+        height: 100px;
+    }
+
+    main h2 {
+        font-size: 3.5rem;
+        margin: 2rem;
+        letter-spacing: 3px;
+    }
+
+    main h2 span {
+        font-size: 1.8rem;
+        padding-left: 50px;
+    }
+
+}

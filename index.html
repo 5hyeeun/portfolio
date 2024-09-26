@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyeeun Portfolio</title>
+    <script src="https://kit.fontawesome.com/dd9837671f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/hyeeun.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="js/hyeeun.js" defer></script>
+    <script src="js/video.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1><button data-animation-scroll="true" data-target="#main">
+                    <span style="color: #77abd1;">H</span><span style="color: #bcdce4;">y</span><span
+                        style="color: #77abd1;">e</span><span style="color: #bcdce4;">e</span><span
+                        style="color: #77abd1;">u</span><span style="color: #bcdce4;">n</span>
+                </button></h1>
+
+            <nav>
+                <ul>
+                    <img src="images/folder.png" alt="">
+                    <li><button data-animation-scroll="true" data-target="#about">프로필</button></li>
+                    <img src="images/folder.png" alt="">
+                    <li><button data-animation-scroll="true" data-target="#features">인터뷰</button></li>
+                    <img src="images/folder.png" alt="">
+                    <li><button data-animation-scroll="true" data-target="#portfolio">작업영상</span></button></li>
+                    <img src="images/folder.png" alt="">
+                    <li><button data-animation-scroll="true" data-target="#contact">연락처</button></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main id="main">
+        <div class="container">
+            <h1><span style="color: #bcdce4;">W</span><span style="color: #77abd1;">e</span><span
+                    style="color: #bcdce4;">l</span><span style="color: #77abd1;">c</span><span
+                    style="color: #bcdce4;">o</span><span style="color: #77abd1;">m</span><span
+                    style="color: #bcdce4;">e</span>
+            </h1>
+            <h2><span></span></h2>
+            <img src="images/search.png" alt="" class="search">
+            <button class="poweroff"><i class="fa-solid fa-power-off"></i></button>
+        </div>
+    </main>
+    <section id="about">
+        <div class="container">
+            <div class="title">
+                <h4>Who Am I</h4>
+                <h2>프로필</h2>
+            </div>
+            <div class="about-self">
+                <div class="left">
+                    <img src="images/doong.jpg" alt="me">
+                </div>
+                <div class="right">
+                    <h3>Hello, <strong>I'm Hyeeun</strong></h3>
+                    <p>안녕하세요. 저는 오혜은입니다.</p>
+                    <p>학력 : </p>
+                    <p>나이 : </p>
+                    <p>경력 : </p>
+                    <p>자격증 :</p>
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-brands fa-html5" style="color: #42769b;"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-css3-alt" style="color: #0a6aaa;"></i>
+                            <a href="#">
+                                <i class="fa-brands fa-js" style="color: #87bde4;"></i>
+                                <a href="#">
+                                    <i class="fa-regular fa-face-smile" style="color: #fdf392;"></i>
+                                </a>
+                            </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="container">
+            <div class="title">
+                <h4>Interview</h4>
+                <h2>인터뷰영상</h2>
+            </div>
+            <div class="do-me">
+                <div class="do-inner">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg"></div>
+    <section id="portfolio">
+        <div class="gallery">
+            <ul class="gallery-collection">
+                <li>
+                    <div class="inner">
+                        <div class="title">
+                            <h4>Gallery</h4>
+                            <h2>작업영상</h2>
+                        </div>
+                        <div class="txt">
+                            <h3>01</h3>
+                            <p>첫번째 영상 뚜둥</p>
+                        </div>
+                        <figure>
+                            <video src="video/vid1.mp4" loop muted></video>
+                        </figure>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <div class="txt">
+                            <h3>02</h3>
+                            <p>두번째 영상 뚜둥</p>
+                        </div>
+                        <figure>
+                            <video src="video/vid2.mp4" loop muted></video>
+                        </figure>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <div class="txt">
+                            <h3>03</h3>
+                            <p>세번째 영상 뚜둥</p>
+                        </div>
+                        <figure>
+                            <video src="video/vid3.mp4" loop muted></video>
+                        </figure>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <div class="txt">
+                            <h3>04</h3>
+                            <p>네번째 영상 뚜둥</p>
+                        </div>
+                        <figure>
+                            <video src="video/vid4.mp4" loop muted></video>
+                        </figure>
+                    </div>
+                </li>
+            </ul>
+            <div class="popup">
+                <div class="txt">
+                    <h2>메롱메롱</h2>
+                    <p>메롱메롱메롱</p>
+                    <button>CLOSE</button>
+                </div>
+                <figure>
+                    <video src="video/vid1.mp4">loop muted</video>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <div class="bg1"></div>
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h4>Contact</h4>
+                <h2>연락처</h2>
+            </div>
+            <div class="contact-me">
+                <div class="left">
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="info-text">
+                            <h3>PHONE</h3>
+                            <p>010-1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <div class="info-text">
+                            <h3>EMAIL</h3>
+                            <p>tig03252@naver.com</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+                        <div class="info-text">
+                            <h3>ADDRESS</h3>
+                            <p>DEAGU, KOREA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">msg</label>
+                            <textarea name="msg" id="msg"></textarea>
+                        </div>
+                        <input type="submit" value="send">
+                    </form>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>

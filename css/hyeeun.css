@@ -1,0 +1,610 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../images/cursor.png') 2 2, auto;
+}
+
+@font-face {
+    font-family: 'locus_sangsang';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.popupbox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    /* 모달레이어팝업일 경우 */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    z-index: 9;
+    padding: 1rem;
+}
+
+header nav {
+    height: 50px;
+    width: 100px;
+}
+
+/* javascript 추가할 클래스 */
+header.on {
+    height: 100%;
+    width: 180px;
+    background: linear-gradient(45deg, #565d61, #183138);
+    animation: fadein .5s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+header ul {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+header ul li {
+    padding: 10px;
+}
+
+header button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+header .container img {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+header h1 button {
+    font-size: 3rem;
+    font-family: 'DungGeunMo';
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgb(29, 85, 183);
+}
+
+header nav button {
+    font-size: 1.2rem;
+    font-family: 'DungGeunMo';
+    text-shadow: 0px 0px 15px rgb(29, 85, 183);
+    color: #bcdce4;
+}
+
+header nav ul li:hover button {
+    color: yellow;
+    text-shadow: 0px 0px 15px rgb(29, 85, 183);
+}
+
+/* main */
+main {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../images/background.png') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'DungGeunMo';
+}
+
+main h1 {
+    font-size: 6rem;
+    text-shadow: 0px 0px 15px rgb(29, 85, 183);
+
+}
+
+main h2 {
+    font-size: 3.5rem;
+    margin: 2rem;
+    letter-spacing: 3px;
+}
+
+main h2 span {
+    padding-left: 65px;
+}
+
+main h2 span::after {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 40px;
+    /* background-color: #fff; */
+    animation: blink 0.7s infinite;
+}
+
+main img {
+    display: inline-block;
+}
+
+main .search {
+    width: 750px;
+    height: 150px;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+main p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+main h2 span {
+    font-size: 3rem;
+    color: black;
+    position: absolute;
+    top: 51.5%;
+    left: 1%;
+    right: 10%;
+}
+
+main .download {
+    background-color: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+}
+
+main .poweroff {
+    background-color: transparent;
+    border: none;
+    font-size: 5rem;
+    color: red;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    padding: .5rem 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: updown 1s infinite;
+    border: 5px double rgb(0, 0, 0);
+}
+
+main .poweroff:hover {
+    opacity: 0.5;
+    border-radius: 50%;
+    background-color: gray;
+    color: yellow;
+    border: 5px double rgb(39, 39, 39);
+}
+
+@keyframes updown {
+    0% {
+        bottom: 1rem;
+    }
+
+    50% {
+        bottom: 1.5rem;
+    }
+
+    100% {
+        bottom: 1rem;
+    }
+}
+
+/* section 공통 */
+section {
+    padding: 5rem 0;
+}
+
+section:nth-child(2n) {
+    background: linear-gradient(45deg, #ffffff, #7cbdce);
+}
+
+section .title {
+    margin-bottom: 3rem;
+}
+
+section .title h4 {
+    font-family: 'DungGeunMo';
+    font-size: 2rem;
+    color: #77abd1;
+}
+
+section .title h2 {
+    font-size: 3.5rem;
+    font-family: 'locus_sangsang';
+}
+
+/* about */
+.about-self::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.about-self .left {
+    width: 50%;
+    float: left;
+}
+
+.about-self .left img {
+    max-width: 100%;
+}
+
+.about-self .right {
+    float: left;
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.about-self .right h3 {
+    font-family: 'DungGeunMo';
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.about-self .right h3 strong {
+    color: #77abd1;
+}
+
+.about-self .right p {
+    font-family: 'locus_sangsang';
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.about-self .right .icon a {
+    font-size: 3rem;
+    margin-right: 0.3rem;
+}
+
+/* bg */
+.bg {
+    background: url('../images/night.jpg') no-repeat center/cover fixed;
+    height: 600px;
+}
+
+.bg1 {
+    background: url('../images/sea.gif')no-repeat center/cover fixed;
+    height: 600px;
+
+}
+
+/* portfolio */
+.gallery {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #ffffff, #7cbdce);
+    display: flex;
+    position: relative;
+}
+
+.gallery-header {
+    max-width: 500px;
+    height: 100%;
+    padding: 10vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery-collection {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    padding-top: 15vh;
+    margin: 0 auto;
+    position: absolute;
+    left: 15%;
+}
+
+.gallery-collection li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 40px 100px;
+    transition: all .5s;
+    position: relative;
+}
+
+.gallery-collection li:hover {
+    flex: 1.5;
+}
+
+.gallery-collection li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 80%;
+    height: 95%;
+    background: linear-gradient(75deg, #ffffff, #7cbdce);
+    opacity: 0;
+    border: 3.5px dotted #5695b3;
+    border-radius: 20px;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+
+.gallery-collection li:hover:before {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+.gallery-collection li .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    position: relative;
+}
+
+.gallery-collection li .inner .title {
+    position: absolute;
+    bottom: 100%;
+}
+
+.gallery-collection li .inner .txt h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    transition: all .5s;
+    font-family: 'locus_sangsang';
+}
+
+.gallery-collection li .inner .txt p {
+    font-family: 'DungGeunMo';
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.gallery-collection li:hover .inner .txt p {
+    font-family: 'locus_sangsang';
+}
+
+.gallery-collection li .inner .txt h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    transition: all .5s;
+}
+
+.gallery-collection li:hover .inner .txt h3::after {
+    width: 120px;
+    background-color: yellow;
+}
+
+.gallery-collection li .inner figure {
+    width: 100%;
+    height: 30%;
+}
+
+.gallery-collection li .inner figure video {
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.popup {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(75deg, #ffffff, #6fabb9);
+    padding: 20vh 7vw 14vh 20vw;
+    display: flex;
+    opacity: 0;
+    transition: all .5s;
+    font-family: 'DungGeunMo';
+}
+
+.popup.on {
+    left: 0;
+    opacity: 1;
+}
+
+.popup .txt {
+    width: 25%;
+    height: 100%;
+}
+
+.popup .txt h2 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0px 0px 15px rgb(55, 114, 182);
+    font-family: 'locus_sangsang';
+}
+
+.popup .txt p {
+    color: #000;
+    text-shadow: 0px 0px 25px rgb(55, 114, 182);
+    margin-bottom: 60px;
+    font-size: 1.5rem;
+    font-family: 'DungGeunMo';
+}
+
+.popup .txt button {
+    color: yellow;
+    text-shadow: 0px 0px 20px rgb(235, 159, 46);
+    background-color: transparent;
+    font-size: 2rem;
+    border: none;
+    font-family: 'locus_sangsang';
+
+}
+
+.popup figure {
+    width: 70%;
+    height: 100%;
+}
+
+.popup figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* contact */
+
+.contact-me::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.contact-me .left {
+    width: 30%;
+    float: left;
+}
+
+.contact-me .left .card {
+    font-family: 'locus_sangsang';
+    padding: 1rem;
+    margin-bottom: 1.3rem;
+    display: flex;
+}
+
+.contact-me .left .card .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.contact-me .right {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+}
+
+.contact-me .right .form-group {
+    font-family: 'locus_sangsang';
+    margin-bottom: 1.3rem;
+}
+
+.contact-me .right .form-group label {
+    font-family: 'locus_sangsang';
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.contact-me .right .form-group input {
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.contact-me .right input:focus {
+    border: 1px solid #2f91d8;
+}
+
+.contact-me .right .form-group textarea {
+    width: 100%;
+    height: 300px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0.5rem;
+    resize: none;
+}
+
+.contact-me .right .form-group textarea:focus {
+    border: 1px solid #77abd1;
+}
+
+.contact-me .right input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background: #77abd1;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ffffff, #69b3df);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    background-color: rgb(69, 78, 83);
+}
