@@ -257,6 +257,10 @@ main .poweroff:hover {
 section {
     padding: 5rem 0;
 }
+section:nth-child(6) {
+    padding:  0;
+    height: 2000px;
+}
 
 section:nth-child(2n) {
     background: linear-gradient(45deg, #ffffff, #7cbdce);
